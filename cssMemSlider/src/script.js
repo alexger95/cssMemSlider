@@ -56,8 +56,15 @@ class MemSlider {
   }
 
   switchDescription(number) {
-    let description = document.querySelector('.description__content');
-    description.innerText = this.slidesArray[number]['description'];
+    let descriptionContent = document.querySelector('.description__content');
+    let description = document.querySelector('.description');
+    description.classList.remove('active');
+    setTimeout(() => {
+      description.classList.add('active');
+      descriptionContent.innerText = this.slidesArray[number]['description'];
+    }, 500);
+    
+    
     return this.slidesArray[number]['description'];
   }
 
