@@ -45,6 +45,7 @@ class MemSlider {
     let paginationElement = document.querySelector(`.pagination>div:nth-child(${number+1})`);
     paginationElement.classList.toggle('active');
     this.switchSlide(number);
+    this.switchDescription(number);
   }
 
   switchSlide(number) {
@@ -55,10 +56,9 @@ class MemSlider {
   }
 
   switchDescription(number) {
-    let slidesList = document.querySelectorAll('.slides>div');
-    Array.from(slidesList).map(e => e.classList.remove('active'));
-    let slideElement = document.querySelector(`.slides>div:nth-child(${number+1})`);
-    slideElement.classList.toggle('active');
+    let description = document.querySelector('.description__content');
+    description.innerText = this.slidesArray[number]['description'];
+    return this.slidesArray[number]['description'];
   }
 
   createSlide(slideObj) {
