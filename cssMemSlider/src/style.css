@@ -12,10 +12,13 @@ body {
 }
 
 .wrapper {
-	height: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	height: 80vh;
 	margin: 8vh auto 0;
 	position: relative;
-	width: 90vw;
+	width: 80vw;
 }
 
 .slider {
@@ -75,19 +78,10 @@ body {
 	border-radius: 50%;
 }
 
-.bottom label span::after {
-	border: 2px solid #ddd;
-	content: " ";
-	display: block;
-	height: 12px;
-	left: -4px;
-	position: absolute;
-	top: -4px;
-	width: 12px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	border-radius: 50%;
+.bottom .controls span {
+  border: 2px solid black;
+  width: 15px;
+  height: 15px;
 }
 
 .bottom label span {
